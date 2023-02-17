@@ -21,18 +21,20 @@ while 1:
     system("cls||clear")
     print("""{}
     
-    ________              ______      __________                    
-    ___  __ \_____ __________  /__    ___  ____/__________________ _
-    __  / / /  __ `/_  ___/_  //_/    __  __/  __  __ \__  /_  __ `/
-    _  /_/ // /_/ /_  /   _  ,<       _  /___  _  / / /_  /_/ /_/ / 
-    /_____/ \__,_/ /_/    /_/|_|      /_____/  /_/ /_/_____/\__,_/  
-     -------- Duvar Manzaralı Pencerede Hayal Kururyorum --------                                                           
+________              ______              
+___  __ \_____ __________  /__ 
+__  / / /  __ `/_  ___/_  //_/ 
+_  /_/ // /_/ /_  /   _  ,<   
+/_____/ \__,_/ /_/    /_/|_|ENZA
+                                              
+  Duvar Manzaralı Pencerede
+      Hayal Kuruyorum..
 
-    Sms: {}                         
-    Arama: {}              {}TG {}@dark_enza\n  
+Sms: {}                         
+Arama: {}              {}TG {}@dark_enza\n  
     """.format(Fore.LIGHTCYAN_EX, len(servisler_sms), len(servisler_call), Style.RESET_ALL, Fore.LIGHTRED_EX))
     try:
-        menu = (input(Fore.LIGHTMAGENTA_EX + " 1- SMS Gönder\n 2- Ara\n 3- Çıkış\n\n" + Fore.LIGHTYELLOW_EX + " Seçim: "))
+        menu = (input(Fore.LIGHTMAGENTA_EX + " 1- SMS Gönder\n 2- Ara\n 3- Çıkış\n\n" + Fore.LIGHTCYAN_EX + " Seçim: "))
         if menu == "":
             continue
         menu = int(menu) 
@@ -43,12 +45,12 @@ while 1:
         continue
     if menu == 1:
         system("cls||clear")
-        print(Fore.LIGHTYELLOW_EX + "Telefon numarasını başında '+90' olmadan yazınız (Birden çoksa 'enter' tuşuna basınız): "+ Fore.LIGHTGREEN_EX, end="")
+        print(Fore.LIGHTCYAN_EX + "Telefon numarasını başında '+90' olmadan yazınız: "+ Fore.LIGHTGREEN_EX, end="")
         tel_no = input()
         tel_liste = []
         if tel_no == "":
             system("cls||clear")
-            print(Fore.LIGHTYELLOW_EX + "Telefon numaralarının kayıtlı olduğu dosyanın dizinini yazınız: "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTCYAN_EX + "Telefon numaralarının kayıtlı olduğu dosyanın dizinini yazınız: "+ Fore.LIGHTGREEN_EX, end="")
             dizin = input()
             try:
                 with open(dizin, "r", encoding="utf-8") as f:
@@ -75,7 +77,7 @@ while 1:
                 continue
         system("cls||clear")
         try:
-            print(Fore.LIGHTYELLOW_EX + "Mail adresi (Bilmiyorsanız 'enter' tuşuna basın): "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTCYAN_EX + "Mail adresi (Bilmiyorsanız 'enter' tuşuna basın): "+ Fore.LIGHTGREEN_EX, end="")
             mail = input()
             if ("@" not in mail or ".com" not in mail) and mail != "":
                 raise
@@ -86,7 +88,7 @@ while 1:
             continue
         system("cls||clear")
         try:
-            print(Fore.LIGHTYELLOW_EX + f"Kaç adet SMS göndermek istiyorsun {sonsuz}: "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTCYAN_EX + f"Kaç adet SMS göndermek istiyorsun {sonsuz}: "+ Fore.LIGHTGREEN_EX, end="")
             kere = input()
             if kere:
                 kere = int(kere)
@@ -99,7 +101,7 @@ while 1:
             continue
         system("cls||clear")
         try:
-            print(Fore.LIGHTYELLOW_EX + "Kaç saniye aralıkla göndermek istiyorsun: "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTCYAN_EX + "Kaç saniye aralıkla göndermek istiyorsun: "+ Fore.LIGHTGREEN_EX, end="")
             aralik = int(input())
         except ValueError:
             system("cls||clear")
@@ -133,7 +135,7 @@ while 1:
     elif menu == 2:
         system("cls||clear")
         try:
-            print(Fore.LIGHTYELLOW_EX + "Telefon numarasını başında '+90' olmadan yazınız: "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTCYAN_EX + "Telefon numarasını başında '+90' olmadan yazınız: "+ Fore.LIGHTGREEN_EX, end="")
             tel_no = int(input())
             if len(str(tel_no)) != 10:
                 raise ValueError
@@ -144,7 +146,7 @@ while 1:
             continue
         system("cls||clear")
         try:
-            print(Fore.LIGHTYELLOW_EX + "Mail adresi (Bilmiyorsanız 'enter' tuşuna basın): "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTCYAN_EX + "Mail adresi (Bilmiyorsanız 'enter' tuşuna basın): "+ Fore.LIGHTGREEN_EX, end="")
             mail = input()
             if ("@" not in mail or ".com" not in mail) and mail != "":
                 raise
@@ -155,7 +157,7 @@ while 1:
             continue
         system("cls||clear")
         try:
-            print(Fore.LIGHTYELLOW_EX + f"Kaç kere aransın (max: {len(servisler_call)}): "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTCYAN_EX + f"Kaç kere aransın (max: {len(servisler_call)}): "+ Fore.LIGHTGREEN_EX, end="")
             kere = int(input())
             if kere > len(servisler_call):
                 raise ValueError
