@@ -30,11 +30,10 @@ _  /_/ // /_/ /_  /   _  ,<
   Duvar Manzaralı Pencerede
       Hayal Kuruyorum..
 
-Sms: {}                         
-Arama: {}              {}TG {}@dark_enza\n  
+Sms: {}                {}TG: {}@dark_enza\n  
     """.format(Fore.LIGHTCYAN_EX, len(servisler_sms), len(servisler_call), Style.RESET_ALL, Fore.LIGHTRED_EX))
     try:
-        menu = (input(Fore.LIGHTMAGENTA_EX + " 1- SMS Gönder\n 2- Ara\n 3- Çıkış\n\n" + Fore.LIGHTCYAN_EX + " Seçim: "))
+        menu = (input(Fore.LIGHTMAGENTA_EX + " 1- SMS Gönder\n 2- Çıkış\n\n" + Fore.LIGHTCYAN_EX + " Seçim: "))
         if menu == "":
             continue
         menu = int(menu) 
@@ -45,7 +44,7 @@ Arama: {}              {}TG {}@dark_enza\n
         continue
     if menu == 1:
         system("cls||clear")
-        print(Fore.LIGHTCYAN_EX + "Telefon numarasını başında '+90' olmadan yazınız: "+ Fore.LIGHTGREEN_EX, end="")
+        print(Fore.LIGHTCYAN_EX + "Telefon Numarası '+90' olmadan: "+ Fore.LIGHTGREEN_EX, end="")
         tel_no = input()
         tel_liste = []
         if tel_no == "":
@@ -132,53 +131,53 @@ Arama: {}              {}TG {}@dark_enza\n
                                     sleep(aralik)
         print(Fore.LIGHTRED_EX + "\nMenüye dönmek için 'enter' tuşuna basınız..")
         input()
+#    elif menu == 2:
+#        system("cls||clear")
+#        try:
+#            print(Fore.LIGHTCYAN_EX + "Telefon numarasını başında '+90' olmadan yazınız: "+ Fore.LIGHTGREEN_EX, end="")
+#            tel_no = int(input())
+#            if len(str(tel_no)) != 10:
+#                raise ValueError
+#        except ValueError:
+#            system("cls||clear")
+#            print(Fore.LIGHTRED_EX + "Hatalı telefon numarası. Tekrar deneyiniz.") 
+#            sleep(3)
+#            continue
+#        system("cls||clear")
+#        try:
+#            print(Fore.LIGHTCYAN_EX + "Mail adresi (Bilmiyorsanız 'enter' tuşuna basın): "+ Fore.LIGHTGREEN_EX, end="")
+#            mail = input()
+#            if ("@" not in mail or ".com" not in mail) and mail != "":
+#                raise
+#        except:
+#            system("cls||clear")
+#            print(Fore.LIGHTRED_EX + "Hatalı mail adresi. Tekrar deneyiniz.") 
+#            sleep(3)
+#            continue
+#        system("cls||clear")
+#        try:
+#            print(Fore.LIGHTCYAN_EX + f"Kaç kere aransın (max: {len(servisler_call)}): "+ Fore.LIGHTGREEN_EX, end="")
+#            kere = int(input())
+#            if kere > len(servisler_call):
+#                raise ValueError
+#        except ValueError:
+#            system("cls||clear")
+#            print(Fore.LIGHTRED_EX + "Hatalı giriş yaptın. Tekrar deneyiniz.") 
+#            sleep(3)
+#            continue
+#        system("cls||clear")
+#        call = SendCall(tel_no, mail)
+#        while call.adet < kere:
+#            for attribute in dir(SendCall):
+#                attribute_value = getattr(SendCall, attribute)
+#                if callable(attribute_value):
+#                    if attribute.startswith('__') == False:
+#                        if call.adet == kere:
+#                            break
+#                        exec("call."+attribute+"()")
+#        print(Fore.LIGHTRED_EX + "\nMenüye dönmek için 'enter' tuşuna basınız..")
+#        input()
     elif menu == 2:
-        system("cls||clear")
-        try:
-            print(Fore.LIGHTCYAN_EX + "Telefon numarasını başında '+90' olmadan yazınız: "+ Fore.LIGHTGREEN_EX, end="")
-            tel_no = int(input())
-            if len(str(tel_no)) != 10:
-                raise ValueError
-        except ValueError:
-            system("cls||clear")
-            print(Fore.LIGHTRED_EX + "Hatalı telefon numarası. Tekrar deneyiniz.") 
-            sleep(3)
-            continue
-        system("cls||clear")
-        try:
-            print(Fore.LIGHTCYAN_EX + "Mail adresi (Bilmiyorsanız 'enter' tuşuna basın): "+ Fore.LIGHTGREEN_EX, end="")
-            mail = input()
-            if ("@" not in mail or ".com" not in mail) and mail != "":
-                raise
-        except:
-            system("cls||clear")
-            print(Fore.LIGHTRED_EX + "Hatalı mail adresi. Tekrar deneyiniz.") 
-            sleep(3)
-            continue
-        system("cls||clear")
-        try:
-            print(Fore.LIGHTCYAN_EX + f"Kaç kere aransın (max: {len(servisler_call)}): "+ Fore.LIGHTGREEN_EX, end="")
-            kere = int(input())
-            if kere > len(servisler_call):
-                raise ValueError
-        except ValueError:
-            system("cls||clear")
-            print(Fore.LIGHTRED_EX + "Hatalı giriş yaptın. Tekrar deneyiniz.") 
-            sleep(3)
-            continue
-        system("cls||clear")
-        call = SendCall(tel_no, mail)
-        while call.adet < kere:
-            for attribute in dir(SendCall):
-                attribute_value = getattr(SendCall, attribute)
-                if callable(attribute_value):
-                    if attribute.startswith('__') == False:
-                        if call.adet == kere:
-                            break
-                        exec("call."+attribute+"()")
-        print(Fore.LIGHTRED_EX + "\nMenüye dönmek için 'enter' tuşuna basınız..")
-        input()
-    elif menu == 3:
         system("cls||clear")
         print(Fore.LIGHTRED_EX + "Çıkış yapılıyor...")
         break
